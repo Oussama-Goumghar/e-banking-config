@@ -1,0 +1,40 @@
+{
+  "name": "Notification",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "idTransaction",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "pin",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "reference",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "notification",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["configApi"],
+  "microserviceName": "configApi",
+  "clientRootFolder": "configApi",
+  "databaseType": "sql",
+  "changelogDate": "20220117225900"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "ClientBlackList",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "idkyc",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "raison",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "client_black_list",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["configApi"],
+  "microserviceName": "configApi",
+  "clientRootFolder": "configApi",
+  "databaseType": "sql",
+  "changelogDate": "20220117225700"
+}

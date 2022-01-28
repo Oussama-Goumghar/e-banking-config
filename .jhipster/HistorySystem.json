@@ -1,0 +1,44 @@
+{
+  "name": "HistorySystem",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "idAgent",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "action",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "module",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "extra",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "history_system",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["configApi"],
+  "microserviceName": "configApi",
+  "clientRootFolder": "configApi",
+  "databaseType": "sql",
+  "changelogDate": "20220117225800"
+}

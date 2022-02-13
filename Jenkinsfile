@@ -59,6 +59,12 @@ pipeline {
                 sh "./mvnw -ntp -Pprod verify jib:build -Djib.to.image=brahimafa/configapi"
             }
         }
+        stage('K8S rollout') {
+            steps {
+                sh "kubectl rollout restart deployment/configapi -n demo"
+            }
+        }
+
     }
 }
 

@@ -1,4 +1,4 @@
-package com.ensa.domain;
+package com.ensa.web.rest.vm;
 
 import java.io.Serializable;
 import javax.persistence.*;
@@ -6,50 +6,44 @@ import javax.validation.constraints.*;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
-/**
- * A Notification.
- */
-@Entity
-@Table(name = "notification")
-@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-public class Notification implements Serializable {
+
+public class NotificationVo implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    public Notification() {
-    }
-
-    public Notification(Long idTransaction, Integer pin, String reference, String status) {
-        this.idTransaction = idTransaction;
-        this.pin = pin;
-        this.reference = reference;
-        this.status = status;
-    }
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "id_transaction")
     private Long idTransaction;
 
-    @Column(name = "pin")
     private Integer pin;
 
-    @Column(name = "reference")
     private String reference;
 
-    @Column(name = "status")
     private String status;
+    private String message="";
+    private String phone="";
+    public String getMessage() {
+        return message;
+    }
 
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
     // jhipster-needle-entity-add-field - JHipster will add fields here
 
     public Long getId() {
         return this.id;
     }
 
-    public Notification id(Long id) {
+    public NotificationVo id(Long id) {
         this.setId(id);
         return this;
     }
@@ -62,7 +56,7 @@ public class Notification implements Serializable {
         return this.idTransaction;
     }
 
-    public Notification idTransaction(Long idTransaction) {
+    public NotificationVo idTransaction(Long idTransaction) {
         this.setIdTransaction(idTransaction);
         return this;
     }
@@ -75,7 +69,7 @@ public class Notification implements Serializable {
         return this.pin;
     }
 
-    public Notification pin(Integer pin) {
+    public NotificationVo pin(Integer pin) {
         this.setPin(pin);
         return this;
     }
@@ -88,7 +82,7 @@ public class Notification implements Serializable {
         return this.reference;
     }
 
-    public Notification reference(String reference) {
+    public NotificationVo reference(String reference) {
         this.setReference(reference);
         return this;
     }
@@ -101,7 +95,7 @@ public class Notification implements Serializable {
         return this.status;
     }
 
-    public Notification status(String status) {
+    public NotificationVo status(String status) {
         this.setStatus(status);
         return this;
     }
@@ -117,10 +111,10 @@ public class Notification implements Serializable {
         if (this == o) {
             return true;
         }
-        if (!(o instanceof Notification)) {
+        if (!(o instanceof NotificationVo)) {
             return false;
         }
-        return id != null && id.equals(((Notification) o).id);
+        return id != null && id.equals(((NotificationVo) o).id);
     }
 
     @Override

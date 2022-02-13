@@ -102,6 +102,12 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.messagebird</groupId>
+            <artifactId>messagebird-api</artifactId>
+            <version>3.2.1</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
             <groupId>tech.jhipster</groupId>
             <artifactId>jhipster-framework</artifactId>
         </dependency>

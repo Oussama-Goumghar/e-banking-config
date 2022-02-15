@@ -48,7 +48,7 @@ public class NotificationResource {
     private String applicationName;
 
     // First create your service object
-   final MessageBirdService wsr = new MessageBirdServiceImpl("ptgmyINoejD4ZKLmPXsjug7ji");
+   final MessageBirdService wsr = new MessageBirdServiceImpl("yccSIioNZ1B4WB6PTmhr4hKpQ");
 
     // Add the service to the client
     final MessageBirdClient messageBirdClient = new MessageBirdClient(wsr);
